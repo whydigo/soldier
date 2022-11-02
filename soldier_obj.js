@@ -29,16 +29,18 @@ soldier.hurt = function() {
         console.log('Ты проиграл.')
     } else {
         soldier.health--
+        console.log('ААААЙ! Маслину поймал!')
     }
 }
-console.log(`Имя: ${soldier.name}, Здоровье: ${soldier.health}, Название оружия: ${soldier.gun.weapon_name}, Патроны: ${soldier.gun.cartridges}, Боезапасы: ${soldier.ammo}.`)
+soldier.getStatus = function() {
+    console.log(`Имя: ${soldier.name}, Здоровье: ${soldier.health}, Название оружия: ${soldier.gun.weapon_name}, Патроны: ${soldier.gun.cartridges}, Боезапасы: ${soldier.ammo}.`)
+}
+soldier.getStatus()
 
 soldier.shoot()
-console.log(`Патроны: ${soldier.gun.cartridges}, Боезапасы: ${soldier.ammo}.`)
+soldier.getStatus()
 soldier.reload()
-console.log(`Патроны: ${soldier.gun.cartridges}, Боезапасы: ${soldier.ammo}.`)
+soldier.getStatus()
 soldier.hurt()
-console.log(`Здоровье: ${soldier.health}`)
-
-console.log(`Имя: ${soldier.name}, Здоровье: ${soldier.health}, Название оружия: ${soldier.gun.weapon_name}, Патроны: ${soldier.gun.cartridges}, Боезапасы: ${soldier.ammo}.`)
+soldier.getStatus()
 
